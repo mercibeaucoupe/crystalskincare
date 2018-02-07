@@ -1,0 +1,76 @@
+<div class="cryozet_container">
+  <div class="cryozet_textbox">
+    <div class="cryozet_text">
+      Cryozet<span class="cryozet_plus">+</span>
+    </div>
+    <div class="cryozet_description">
+      <span style="color:#666;font-size:2vw;font-weight:bold;padding-right:.6vw;border-right:.2vw solid #666;">Cooling</span><span style="color:#666;font-size:2vw;font-weight:bold;padding-left:.6vw;padding-right:.6vw;border-right:.2vw solid #666;">Heating</span><span style="color:#666;font-size:2vw;font-weight:bold;padding-left:.6vw;padding-right:.6vw;">Electroporation</span>
+    </div>
+  </div>
+  <div class="cryozet_button_container">
+    <div class="cryozet_procedure" ng-click="cryozet.showProcedure()">
+      Procedure
+    </div>
+    <div class="cryozet_product" ng-click="cryozet.showProducts()">
+      Products
+    </div>
+  </div>
+</div>
+<div class="cryozet_caption_container">
+  <div class="procedure_container" ng-show="cryozet.isProcedure">
+    <div class="title">
+      Overview:
+    </div>
+    <div class="banner">
+
+      A <span class="emp">Pain-Free</span> procedure to peel away dead skin cells and activate rapid healing for new healthy skin.
+    </div>
+    <div class="title">
+      Procedure:
+    </div>
+    
+    <div class="steps">
+      <div class="stepOne">
+        <div class="number">
+          #1
+        </div>
+        <div class="name">
+          Chemical Peeling
+        </div>
+        <div class="stepCaption">
+          Ingredients start to remove layers of dead skin cells. Chemicals are tailored to a range of skin types:
+          <div class="skinTypes">
+            Ance Prone Skin, Sensitive Skin, Dry Skin, etc.
+          </div>
+        </div>
+      </div>
+      <div class="stepTwo">
+        <div class="number">
+          #2
+        </div>
+        <div class="name">
+          Ionzyme
+        </div>
+        <div class="stepCaption">
+          Pain-free electric stimuli flows through a face gauze to enable equal penetration of ionized vitamins and active ingredients to facilitate healthy skin recovery.
+        </div>
+      </div>
+      <div class="stepThree">
+        <div class="number">
+          #3
+        </div>
+        <div class="name">
+          Cool/Hot Stimuli
+        </div>
+        <div class="stepCaption">
+          Maximizes ingredient absorbtion and effects by varying temperature control.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <cry-product ng-show="cryozet.isProducts">
+  </cry-product>
+
+</div>
+</div>

@@ -1,0 +1,94 @@
+<div class="slideshow_container">
+  <div class="slides">
+  	<div class="slide_one_container ani" ng-class="slide_one">
+      <div class="slide_one_text">
+      	<div class="slide_one_title">
+      	  LOCATED INSIDE
+      	</div>
+      	<div class="slide_one_caption">
+      	  <div>ANNANDALE PROFESSIONAL</div>
+      	  <div>BUILDING</div>
+      	</div>
+      	<div class="slide_one_second_caption">
+      	  Second Floor, Suite #202
+      	</div>
+      </div>
+      <div class="slide-dots">
+      	<span class="up glyphicon glyphicon-chevron-up" ng-click="location.prevSlide()"></span>
+        <span class="dot one" ng-click="location.slidePick(0)" ng-class="dotpress_one"></span>
+        <span class="dot two" ng-click="location.slidePick(1)" ng-class="dotpress_two"></span>
+        <span class="dot three" ng-click="location.slidePick(2)" ng-class="dotpress_three"></span>
+        <span class="dot four" ng-click="location.slidePick(3)" ng-class="dotpress_four"></span>
+        <span class="down glyphicon glyphicon-chevron-down" ng-click="location.nextSlide()"></span>
+      </div>
+    </div>
+    <div class="slide_two_container ani" ng-class="slide_two">
+      <div class="slide_two_text">
+      	<div class="slide_two_title">
+      	  A TRANQUIL ENVIRONMENT
+      	</div>
+      	<div class="slide_two_caption">
+      	  Relax your mind and body with complimentary refreshments and mood-enchancing aroma of essence oils.
+      	</div>
+      </div>
+      <div class="slide-dots">
+      	<span class="up glyphicon glyphicon-chevron-up" ng-click="location.prevSlide()"></span>
+        <span class="dot one" ng-click="location.slidePick(0)" ng-class="dotpress_one"></span>
+        <span class="dot two" ng-click="location.slidePick(1)" ng-class="dotpress_two"></span>
+        <span class="dot three" ng-click="location.slidePick(2)" ng-class="dotpress_three"></span>
+        <span class="dot four" ng-click="location.slidePick(3)" ng-class="dotpress_four"></span>
+        <span class="down glyphicon glyphicon-chevron-down" ng-click="location.nextSlide()"></span>
+      </div>
+    </div>
+    <div class="slide_three_container ani" ng-class="slide_three">
+      <div class="slide_three_text">
+      	<div class="slide_three_title">
+      	  21 YEARS OF EXPERIENCE
+      	</div>
+      	<div class="slide_three_caption">
+      	  Nayeon Kim, licensed aesthetician and business owner, studied in South Korea under AVON Cosmetics company and practiced skin care in the United States for +15 years.
+      	</div>
+      </div>
+      <div class="slide-dots">
+      	<span class="up glyphicon glyphicon-chevron-up" ng-click="location.prevSlide()"></span>
+        <span class="dot one" ng-click="location.slidePick(0)" ng-class="dotpress_one"></span>
+        <span class="dot two" ng-click="location.slidePick(1)" ng-class="dotpress_two"></span>
+        <span class="dot three" ng-click="location.slidePick(2)" ng-class="dotpress_three"></span>
+        <span class="dot four" ng-click="location.slidePick(3)" ng-class="dotpress_four"></span>
+        <span class="down glyphicon glyphicon-chevron-down" ng-click="location.nextSlide()"></span>
+      </div>
+    </div>
+    <div class="slide_four_container ani" ng-class="slide_four">
+      <div class="slide_four_text">
+      	<div class="slide_four_title">
+      	  MODERN PRACTICES
+      	</div>
+      	<div class="slide_four_caption">
+      	  Updated with the newest equipment and practices from South Korea, the leading skin care industry, Crystal Skin Care strives to maximize results and customer satisfaction.
+      	</div>
+      </div>
+      <div class="slide-dots">
+      	<span class="up glyphicon glyphicon-chevron-up" ng-click="location.prevSlide()"></span>
+        <span class="dot one" ng-click="location.slidePick(0)" ng-class="dotpress_one"></span>
+        <span class="dot two" ng-click="location.slidePick(1)" ng-class="dotpress_two"></span>
+        <span class="dot three" ng-click="location.slidePick(2)" ng-class="dotpress_three"></span>
+        <span class="dot four" ng-click="location.slidePick(3)" ng-class="dotpress_four"></span>
+        <span class="down glyphicon glyphicon-chevron-down" ng-click="location.nextSlide()"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="locationPage_container">
+  <div class="address_container">
+    <div class="glyphicon glyphicon-map-marker" style="font-size:3vw;padding:.5vw;color:#fff;border-bottom:solid .3vw #fff;width:5vw;margin-bottom:.5vw;"></div>
+    <div class="address">7023 Little River Tnpk Suite 202</div>
+    <div class="address">Annandale VA 22003</div>
+  </div>
+</div>
+<div map-lazy-load="https://maps.google.com/maps/api/js"
+  map-lazy-load-params="{{googleMapsUrl}}">
+  <ng-map center="38.828686241,-77.1884117" zoom="16">
+    <marker position="38.828686241,-77.1884117"></marker>
+  </ng-map>
+</div>

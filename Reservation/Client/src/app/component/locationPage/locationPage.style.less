@@ -1,0 +1,287 @@
+.locationPage_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25vh;
+  background-color: #77c58c;
+}
+
+.address_container {
+  position: relative;
+  padding-bottom: 1.4vw;
+  top: 1vw;
+  background-color: #77c58c;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  z-index: 7;
+  text-align: center;
+}
+
+.address {
+  text-align: center;
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+.slideshow_container {
+  width: 98vw;
+  height: 100vh;
+}
+.slide_one_container {
+  height: 100vh;
+  width: 98.9vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("/src/app/component/locationPage/img/AnnandaleBuilding.jpg");
+  opacity: .8;
+  background-size: cover;
+  background-position: center;
+}
+.slide_one_text {
+  margin: 8vw;
+  padding: 3vw;
+  background-color: rgba(112,128,144,.7);
+  border: solid .6vw #fff;
+  .slide_one_title {
+  	font-size: 5vw;
+  	color: #fff;
+  	border-bottom: solid .15vw #fff;
+  }
+  .slide_one_caption {
+    padding-top: 1.8vw;
+  	font-size: 2.4vw;
+  	font-weight: bold;
+  	color: #fff;
+  }
+  .slide_one_second_caption {
+  	font-size: 2vw;
+  	color: #fff;
+  }
+}
+
+.slide-dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1.3vw;
+  width: 1.3vw;
+  margin: 1vw 0vw 1vw .2vw;
+  background-color: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.dot.one {
+  background-color: #898CFF;
+}
+
+.dot.one:active {
+  background-color: #676ec6;
+}
+
+.dot.two {
+  background-color: #FF89B5;
+}
+
+.dot.two:active {
+  background-color: #c47494;
+}
+
+.dot.three {
+  background-color: #FFDC89;
+}
+
+.dot.four {
+  background-color: #90D4F7;
+}
+
+.dot:hover {
+  border: .2vw solid #fff;
+  -webkit-transition: 0.3s ease-in all;
+  -moz-transition: 0.3s ease-in all;
+  -o-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+}
+
+.dot:active {
+  border: none;
+
+}
+
+.up, .down {
+  font-size: 1.3vw;
+  color: white;
+  background-color: rgba(0,0,0,.6);
+  padding: .3vw;
+  cursor: pointer;
+}
+
+.up {
+  margin: 1vw 3vw .5vw 0;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+}
+
+.down {
+  margin: .5vw 3vw 1vw 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+.up:hover, .down:hover {
+  background-color: rgba(0,0,0,1);
+  -webkit-transition: 0.2s ease-in all;
+  -moz-transition: 0.2s ease-in all;
+  -o-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+.up:active, .down:active {
+  background-color: rgba(0,0,0,.4);
+  border: solid .2vw black;
+  padding: .1vw;
+}
+
+.slide_two_container {
+  height: 100vh;
+  width: 98.9vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("/src/app/component/locationPage/img/plants.jpg");
+  opacity: .8;
+  background-size: cover;
+  background-position: bottom;
+}
+.slide_two_text {
+  margin: 8vw;
+  padding: 3vw;
+  width: 40vw;
+  background-color: rgba(201,113,149,.7);
+  border: solid .6vw #fff;
+  .slide_two_title {
+  	font-size: 4vw;
+    font-weight: bold;
+    line-height: 4vw;
+  	color: #fff;
+    padding-bottom: 1.8vw;
+  	border-bottom: solid .15vw #fff;
+  }
+  .slide_two_caption {
+    padding-top: 1.8vw;
+  	font-size: 1.7vw;
+  	color: black;
+    opacity: .7;
+  }
+}
+
+.slide_three_container {
+  height: 100vh;
+  width: 98.9vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("/src/app/component/locationPage/img/main.jpg");
+  opacity: .8;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.slide_three_text {
+  margin: 8vw;
+  width: 40vw;
+  padding: 3vw;
+  background-color: rgba(221,189,124,.7);
+  border: solid .6vw #fff;
+  .slide_three_title {
+  	font-size: 4vw;
+    font-weight: bold;
+    line-height: 4vw;
+  	color: #fff;
+    padding-bottom: 1.8vw;
+  	border-bottom: solid .15vw #fff;
+  }
+  .slide_three_caption {
+    padding-top: 1.8vw;
+  	font-size: 1.7vw;
+  	color: black;
+    opacity: .8;
+  }
+  .slide_three_second_caption {
+  	font-size: 2vw;
+  }
+}
+
+.slide_four_container {
+  height: 100vh;
+  width: 98.9vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("/src/app/component/locationPage/img/bed.jpg");
+  opacity: .8;
+  background-size: cover;
+  background-position: bottom;
+}
+.slide_four_text {
+  width: 45vw;
+  margin: 8vw;
+  padding: 3vw;
+  background-color: rgba(127,187,211,.7);
+  border: solid .6vw #fff;
+  .slide_four_title {
+  	font-size: 4vw;
+    font-weight: bold;
+    line-height: 4vw;
+  	color: #fff;
+    padding-bottom: 1.8vw;
+  	border-bottom: solid .15vw #fff;
+  }
+  .slide_four_caption {
+    padding-top: 1.8vw;
+  	font-size: 1.7vw;
+  	color: black;
+    opacity: .7;
+  }
+}
+
+.inactiveSlide {
+  display: none;
+
+}
+
+.activeSlide {
+  display: flex;
+}
+
+.activeDot {
+  border: .2vw solid #fff;
+}
+
+.inactiveDot {
+  border: none;
+}
+
+.ani {
+  -webkit-animation-name: ani;
+  -webkit-animation-duration: 1.5s;
+  animation-name: ani;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes ani {
+  from {opcacity: .6}
+  to {opacity: .8}
+}
+
+@keyframes ani {
+  from {opacity: .6}
+  to {opacity: .8}
+}

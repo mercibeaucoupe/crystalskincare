@@ -1,0 +1,230 @@
+.cryozet_container {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
+  background-color: #77c58c;
+  background-image: url('/src/app/component/servicePage/serviceTechnology/img/cryozet-background.png');
+  background-size: cover;
+  width: 98.9vw;
+  height: 25vw;
+  .cryozet_textbox {
+    padding: .7vw 3vw 0 0;
+    .cryozet_text {
+      font-size: 7.5vw;
+      font-weight: 600;
+      color: #666;
+      border-bottom: solid .7vw #666;
+      .cryozet_plus {
+        position: relative;
+        bottom: 1.8vw;
+      }
+    }
+    .cryozet_description {
+      padding-top: 1vw;
+    }
+  }
+  .cryozet_button_container {
+    width: 35vw;
+    height: 4vw;
+    margin: 2vw 2vw 0 0;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    .cryozet_procedure {
+      border-top-left-radius: 2%;
+      border-bottom-left-radius: 2%;
+      position: relative;
+      left: 1.75vw;
+      width: 17.5vw;
+      height: 4vw;
+      font-size: 2.4vw;
+      color: #fff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 1.75vw;
+      -webkit-clip-path: polygon(90% 0, 80% 50%, 90% 100%, 0 100%, 0 0);
+      clip-path: polygon(90% 0, 80% 50%, 90% 100%, 0 100%, 0 0);
+      background-color: #ed6d79;
+      transition: .8s all;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; 
+      user-select: none;
+    }
+    .cryozet_product {
+      border-top-right-radius: 2%;
+      border-bottom-right-radius: 2%;
+      position: relative;
+      right: 1.75vw;
+      width: 17.5vw;
+      height: 4vw;
+      font-size: 2.4vw;
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 1.75vw;
+      -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 20% 50%);
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 20% 50%);
+      background-color: #ff96e3;
+      transition: .8s all;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; 
+      user-select: none;
+    }
+  }
+  .cryozet_product:hover {
+    border-bottom: solid .4vw #ed6d79;
+    padding-right: 2.3vw;
+    height: 4.5vw;
+    transition: .8s;
+    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+  }
+  .cryozet_procedure:hover {
+    border-bottom: solid .4vw #ff96e3;
+    padding-left: 2.3vw;
+    height: 4.5vw;
+    z-index: 4;
+    transition: .8s;
+    -webkit-clip-path: polygon(90% 0, 90% 50%, 90% 100%, 0 100%, 0 0);
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+  }
+  .cryozet_product:active {
+    background-color: #c178b2;
+  }
+  .cryozet_procedure:active {
+    background-color: #cc606d;
+  }
+}
+
+.cryozet_caption_container {
+  width: 98.9vw;
+  background-color: #439bbf;
+}
+  .procedure_container {
+    width: 98.9vw;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .banner {
+      font-size: 2.5vw;
+      width: 98.9vw;
+      padding: 2vw 20vw 2vw 20vw;
+      color: #666;
+      background-color: #fff;
+      text-align: center;
+      .emp {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 3vw;
+        color: #ee6c79;
+      }
+    }
+    .title {
+      font-size: 3vw;
+      color: #fff;
+      font-weight: 600;
+      background-color: #ee6c79;
+      width: 98.9vw;
+      text-align: center;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      .stepOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: .5vw;
+        text-align: center;
+        width: 80vw;
+        .number {
+          font-size: 8vw;
+          margin: 1vw;
+          font-weight: 800;
+          color: #80c88f;
+        }
+        .name {
+          font-size: 3vw;
+          height: 10vw;
+          background-color: #80c88f;
+          color: #fff;
+          padding: .2vw;
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+        }
+        .stepCaption {
+          font-size: 2vw;
+          background-color: #fff;
+          height: 10vw;
+          padding: .7vw;
+          color: #666;
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+          .skinTypes {
+            font-size: 1vw;
+            color: black;
+          }
+        }
+      }
+      .stepTwo {
+        text-align : center;
+        margin: .5vw;
+        width: 40vw;
+        .number {
+          font-size: 3vw;
+          font-weight: 800;
+          color: #f6a36f;
+        }
+        .name {
+          font-size: 1.6vw;
+          background-color: #f6a36f;
+          color: #fff;
+          padding: .2vw;
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+        }
+        .stepCaption {
+          font-size: 1.1vw;
+          background-color: #fff;
+          padding: .3vw;
+          color: #666;
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+        }
+      }
+      .stepThree {
+        margin: .5vw;
+        text-align: center;
+        width: 40vw;
+        .number {
+          font-size: 3vw;
+          font-weight: 800;
+          color: #f388b5;
+        }
+        .name {
+          font-size: 1.6vw;
+          background-color: #f388b5;
+          color: #fff;
+          padding: .2vw;
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+        }
+        .stepCaption {
+          background-color: #fff;
+          font-size: 1.2vw;
+          padding: .4vw;
+          color: #666;
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+        }
+      }
+    }
+  }

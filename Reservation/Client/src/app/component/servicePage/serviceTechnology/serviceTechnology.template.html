@@ -1,0 +1,26 @@
+<div class="service_technology_container">
+  <div class="menu">
+    <div class="item" ng-click="serviceTechnology.displayItem1()">
+      BioLight
+    </div>
+    <div class="item" ng-click="serviceTechnology.displayItem2()">
+      Cryozet+
+    </div>
+    <div class="item" ng-click="serviceTechnology.displayItem3()">
+      Hydroimpact
+    </div>
+    <div class="item" ng-click="serviceTechnology.displayItem4()">
+      Magic Peel
+    </div>
+    <div class="item" ng-click="serviceTechnology.displayItem5()">
+      RFZet+
+    </div>
+  </div>
+  <div class="content">
+    <cry-biolight ng-show="serviceTechnology.isBiolight"></cry-biolight>
+    <cry-cryozet ng-show="serviceTechnology.isCryozet"></cry-cryozet>
+    <cry-hydroimpact ng-show="serviceTechnology.isHydro"></cry-hydroimpact>
+    <cry-magicpeel ng-show="serviceTechnology.isMagic"></cry-magicpeel>
+    <cry-rfzet ng-show="serviceTechnology.isZet"></cry-rfzet>
+  </div>
+</div>

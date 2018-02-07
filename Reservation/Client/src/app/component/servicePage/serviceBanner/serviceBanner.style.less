@@ -1,0 +1,56 @@
+.service_banner_container {
+  width: 98.9vw;
+  height: 30vw;
+  background-image: url("/src/app/component/servicePage/serviceBanner/img/layingLady.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 2.5vw;
+  .quote_container {
+    padding: 1vw;
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid .3vw;
+    border-top: solid .3vw;
+    .quote {
+      font-family: georgia, serif;
+      font-style: italic;
+      font-size: 2.7vw;
+      color: #6c8ac6;
+      font-weight: 700;
+      line-height: 3vw;
+    }
+    .quote::before {
+      content: "\201C";
+      font-size: 5vw;
+      color: #ee6c79;
+    }
+    .quote::after {
+      content: "\201D";
+      font-size: 5vw;
+      color: #ee6c79;
+    }
+    .author {
+      align-self: flex-end;
+      font-weight: bold;
+      font-size: 1.3vw;
+      color: #ee6c79;
+    }
+  }
+  .welcome {
+    margin-right: 1vw;
+    .caption {
+      background-color: rgba(0,0,0,0.3);
+      color: white;
+      font-size: 2vw;
+      padding: 1vw;
+    }
+    .title {
+      font-size: 3vw;
+    }
+  }
+}
