@@ -1,0 +1,86 @@
+<div class="container_one">
+  <div class="one">
+    <div class="title">
+  	  BIO-LIGHT
+    </div>
+    <div class="caption">
+      LED
+    </div>
+    <div class="caption_two">
+  	  SKIN REJUNEVATION SYSTEM
+    </div>
+  </div>
+  <div class="title">
+      Click buttons for more Information
+  </div>
+  <div class="button_container">	
+  	<div class="blue">
+  	  <button type="button" class="btn btn-primary" ng-click="biolight.displayBlue()">Blue Light</button>
+  	</div>
+  	<div class="yellow">
+  	    <button type="button" class="btn btn-warning" ng-click="biolight.displayYellow()">Yellow Light</button>
+  	</div>
+  	<div class="red">
+   	    <button type="button" class="btn btn-danger" ng-click="biolight.displayRed()">Red Light</button>
+   	</div>
+  </div>
+</div>
+  <div class="caption_tech">
+    <div class="blue_show" ng-show="biolight.isBlue">
+      <div class="blue_container">
+        <img style="width:26vw;margin:2vw;margin-left:3vw;" src="/src/app/component/servicePage/serviceTechnology/img/bluelight2.png">
+        <div class="blue_range">
+          <div class="blue_range_title">
+            SPECTRUM RANGE
+          </div>
+          <div class="blue_range_wave">
+            465nm - 475nm
+          </div>
+        </div>
+      </div>
+      <div class="blue_caption">
+        <div style="position:relative;font-size:3vw;font-weight:600;background-color:blue;width:31vw;padding-left:.6vw;opacity:.8;">BENEFITS</div>
+        <div style="background-color: rgba(0,0,0,.5);padding:1vw;box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);">Improves acne prone skin with its purifying and antibacterial properities by target sebaceous glands, diminishes inflammation, decongests skin
+        </div>
+      </div>
+    </div>
+    <div class="yellow_show" ng-show="biolight.isYellow">
+      <div class="yellow_container">
+        <img style="width:35vw;margin:2vw;margin-left:3vw;" src="/src/app/component/servicePage/serviceTechnology/img/yellowlight2.png">
+        <div class="yellow_range">
+          <div class="yellow_range_title">
+            SPECTRUM RANGE
+          </div>
+          <div class="yellow_range_wave">
+            588nm - 595nm
+          </div>
+        </div>
+      </div>
+      <div class="yellow_caption">
+        <div style="position:relative;font-size:3vw;font-weight:600;background-color:yellow;width:31vw;padding-left:.6vw;color:#666;opacity:.7;">BENEFITS</div>
+        <div style="background-color: rgba(0,0,0,.5);padding:1vw;box-shadow: 0px 1px 6px 0px rgba(0,0,0,.75);">
+          Effective in treating redness, reducing the appearance of spider veins and sun damage. Delivers soothing and calming properities.
+        </div>
+      </div>
+    </div>
+    <div class="red_show" ng-show="biolight.isRed">
+      <div class="red_container">
+        <img style="width:26vw;margin:2vw;margin-left:3vw;" src="/src/app/component/servicePage/serviceTechnology/img/redlight2.png">
+        <div class="red_range">
+          <div class="red_range_title">
+            SPECTRUM RANGE
+          </div>
+          <div class="red_range_wave">
+            620nm - 625nm
+          </div>
+        </div>
+      </div>
+      <div class="red_caption">
+        <div style="position:relative;font-size:3vw;font-weight:600;background-color:red;width:31vw;padding-left:.6vw;color:#fff;opacity:.7;">BENEFITS</div>
+        <div style="background-color: rgba(0,0,0,.5);padding:1vw;box-shadow: 0px 1px 6px 0px rgba(0,0,0,.75);">
+          Increases collagen production fivefold in the skin, triggering repair mechanisms and stimulting fibroblast cells and cell growth
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

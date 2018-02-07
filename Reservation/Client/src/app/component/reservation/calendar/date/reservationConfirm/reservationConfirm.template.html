@@ -1,0 +1,47 @@
+<div class="reservationConfirm_container">
+  <div class="reservation_info">
+  	<div class="reservation_info_container">
+  	  <div class="reservationConfirm_text">
+  	  	Reservation Time
+  	  	<div class="reservation_month_container">
+  	  	  <div class="reservation_month">
+  	  	  	{{reservationConfirm.getDay()}}
+  	  	    {{reservationConfirm.getMonth()}}
+  	  	    {{reservationConfirm.year}}
+  	  	  </div>
+  	  	</div>
+        <div class="reservationConfirm_time">
+          {{reservationConfirm.getTime()}}
+          {{reservationConfirm.getDayOfWeek()}}
+        </div>
+        <div class="select">
+          Select the type of Treatment:
+        </div>
+        <select class="form-control selectMenu" ng-model="reservationConfirm.selectedTreatment" ng-options="x for x in reservationConfirm.options">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="reservation_user_info">
+  	<h1 class="title">Create Reservation</h1>
+  	<form name="createReservation">
+  	  <div class="form-group">
+  	  	<label for="email">Email Address (required):</label>
+  	  	<input name="email" type="text" ng-model="reservationConfirm.email" class="form-control" id="email" autofocus required ng-pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i" placeholder="example@domain.com">
+  	  	<span ng-show="createReservation.email.$dirty && createReservation.email.$invalid">
+  	  	  <span style="color:red" ng-show="createReservation.email.$error.required">Email is required.</span>
+  	  	  <span style="color:red" ng-show="createReservation.email.$error.pattern">Invalid email address.</span>
+  	  	</span>
+  	  </div>
+  	  <div class="form-group">
+  	  	<label for="phone">Phone Number (required):</label>
+  	  	<input name="phone" type="text" ng-model="reservationConfirm.phone" class="form-control" id="phone" autofocus required placeholder="(123)-456-7890" ng-pattern="/^([\d]{6}|((\([\d]{3}\)|[\d]{3})( [\d]{3} |-[\d]{3}-)))[\d]{4}$/">
+  	  	<span ng-show="createReservation.phone.$dirty && createReservation.phone.$invalid">
+  	  	  <span style="color:red" ng-show="createReservation.phone.$error.required">Phone number is required.</span>
+  	  	  <span style="color:red" ng-show="createReservation.phone.$error.pattern">Invalid phone number.</span>
+  	  	</span>
+  	  </div>
+  	  <button type="submit" class="btn btn-primary" ng-click="reservationConfirm.confirm()" ng-disabled="createReservation.email.$invalid || createReservation.phone.$invalid">Confirm Reservation</button>
+  	</form>
+  </div>
+</div>

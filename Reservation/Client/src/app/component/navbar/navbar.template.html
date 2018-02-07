@@ -1,0 +1,53 @@
+<nav id="header_nav" ng-class="navClass">
+  <div id="navMenuContainer" ng-class="navLayout">
+    <div id="brand_logo">
+      <a ui-sref="welcome">
+        <img ng-class="navLogo" src="/src/app/component/navbar/img/Logo.png">
+      </a>
+    </div>
+    <div id="appointment_searchbar">
+      <div class="search_header">
+        YOUR APPOINTMENTS
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon" style="padding:.05vw 1vw .05vw 1vw;font-size:2vw;">#</span>
+        <input type="text" class="form-control input-sm" style="margin-right:0;">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-info btn-sm" style="margin:0">
+            <span type="button" class="glyphicon glyphicon-search" style="color:#fff;"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div id="selection" ng-class="navSelect">
+    <a ui-sref="service">
+      <div id="navSelectService" ng-class="navService">
+        <img src="/src/app/component/navbar/img/Services.png" ng-show="navbar.isLarge">
+        <h1 ng-class="service">SERVICES</h1>
+        <p ng-show="navbar.isLarge">Exceed your skincare goals. Click here to see a variety of treatment options</p>
+      </div>
+    </a>
+    <a ui-sref="reservation">
+      <div id="navSelectReservations" ng-class="navReservations">
+        <img src="/src/app/component/navbar/img/Reservations.png" ng-show="navbar.isLarge">
+        <h1 ng-class="reservations">RESERVATIONS</h1>
+        <p ng-show="navbar.isLarge">Make your time our time. Click here to check availability and to make reservations</p>
+        </div>
+    </a>
+    <a ui-sref="location">
+      <div id="navSelectLocation" ng-class="navLocation">
+        <img src="/src/app/component/navbar/img/Location.png" ng-show="navbar.isLarge">
+        <h1 ng-class="location">LOCATION</h1>
+        <p ng-show="navbar.isLarge">Having difficulty finding us? Click here for directions and maps</p>
+      </div>
+    </a>
+      <div id="navSelectAbout" ng-class="navAbout">
+        <img src="" ng-show="navbar.isLarge">
+        <h1 ng-class="about">CONTACT</h1>
+        <p ng-show="navbar.isLarge">Clients are our #1! Click here to get to know more about us</p>
+      </div>
+    </div>
+  </div>
+</nav>
+<div ng-class="navClass"></div>

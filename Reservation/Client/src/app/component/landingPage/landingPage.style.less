@@ -1,0 +1,244 @@
+.landingPage_container {
+  width: 98.9vw;
+  height: 45vw;
+  background-color: #white;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.landingPage_text {
+  height: 80vh;
+  margin-right: 5vw;
+  margin-top: 4vw;
+}
+
+.mission_introduction {
+  display: flex;
+  flex-direction: column;
+  line-height: 4vw;
+  text-align: left;
+  z-index: 5;
+  width: 40vw;
+  padding: 10px;
+  .natural {
+    font-size: 6vw;
+    color: #ffbdbd;
+    font-weight: 600;
+  }
+  .and {
+    font-size: 7vw;
+    font-weight: 700;
+    color: #666;
+  }
+  .beautiful {
+    font-size: 6vw;
+    color: #f1cbff;
+    font-weight: 600;
+  }
+  .skin {
+    font-size: 4vw;
+    color: #666;
+    font-weight: bolder;
+  }
+  .smallText {
+    color: #666;
+    font-size: 2vw;
+  }
+}
+
+.mission_statement {
+  padding: 2vw;
+  width: 40vw;
+  height: 19vw;
+  line-height: 1.4vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,.3);
+  z-index: 3;
+  border-top: solid;
+  border-color: #a9d6b5;
+  border-width: 1.7vw;
+  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+  .title {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #ffffff;
+    .emphasis {
+      font-size: 2.2vw;
+      color: #ffdfba;
+      font-weight: 600;
+      opacity: 1;
+    }
+  }
+  .statement {
+    font-size: 1.2vw;
+    color: #ffffff;
+    opacity: 1;
+    border-bottom: solid .1vw #fff;
+    padding-bottom: 1vw;
+    .emphasis {
+      font-weight: bold;
+    }
+  }
+  .skinTypes {
+    font-size: 1vw;
+    padding-top: 1vw;
+    color: #ffffff;
+    li {
+       list-style-type: none;
+    }
+  }
+  .intro {
+    padding-top: 1.2vw;
+    font-size: 1.2vw;
+    color: #ffffff;
+  }
+}
+.image {
+  img {
+    width: 45vw;
+  }
+}
+
+.landingPage_container_2 {
+  border-top: solid .7vw #666;
+  background-color: #666;
+}
+.benefit_container {
+  text-align: center;
+  width: 98.9vw;
+  height: 42.5vw;
+  display: flex;
+  justify-content: center;
+  .freckles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url("/src/app/component/landingPage/img/Freckles.png");
+    width: 24.7vw;
+    background-size: cover;
+    background-position: center;
+    font-size: 4.5vw;
+    color: #fff;
+    font-weight: 600;
+    transition: .9s;
+    .frecklesDetail {
+      position: relative;
+      top: 13vw;
+    }
+  }
+  .hyperPigment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 24.7vw;
+    text-align: center;
+    background-image: url("/src/app/component/landingPage/img/hyper.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3.2vw;
+    line-height: 3vw;
+    padding: .4vw;
+    transition: .9s;
+  }
+  .lifting {
+    width: 24.7vw;
+    line-height: 4.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url("/src/app/component/landingPage/img/Lifting.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 5vw;
+    transition: .4s;
+  }
+  .wrinkle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url("/src/app/component/landingPage/img/Wrinkles.png");
+    background-size: cover;
+    background-position: center;
+    width: 24.7vw;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 600;
+    transition: .9s;
+  }
+  .freckles:hover {
+    transition: .9s;
+    font-size: 3.5vw;
+    opacity: .5;
+    color: black;
+    background-position: 70%;
+    line-height: 3vw;
+    .frecklesDetail:after {
+      position: relative;
+      transition: .9s all;
+      transition-delay: 1.3s;
+      font-size: 1.2vw;
+      line-height: .2vw;
+      bottom: 13vw;
+      color: black;
+      content: 'Reduce the appearence of Freckles';
+    }
+  }
+  .hyperPigment:hover {
+    transition: .9s;
+    font-size: 2.5vw;
+    opacity: .5;
+    color: black;
+    line-height: 2.2vw;
+    background-position: right;
+    .hyperPigmentDetail:after {
+      transition: .2s;
+      font-size: 1.2vw;
+      color: black;
+      content: 'Rids your skin of unwanted discoloration';
+    }
+  }
+  .lifting:hover {
+    transition: .9s;
+    font-size: 3.8vw;
+    opacity: .5;
+    color: black;
+    line-height: 3vw;
+    background-position: right;
+    .liftingDetail:after {
+      transition: .2s;
+      font-size: 1.2vw;
+      content: 'Tightens/firms without surgerical methods';
+      color: black;
+    }
+  }
+  .wrinkle:hover {
+    transition: .9s;
+    font-size: 3vw;
+    opacity: .5;
+    color: black;
+    background-position: 40%;
+    line-height: 3vw;
+    .wrinkleDetail:after {
+      transition: .2s;
+      font-size: 1.2vw;
+      content: 'Deep/Fine Lines smooth over';
+      color: black;
+    }
+  }
+
+}
