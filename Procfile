@@ -1,1 +1,1 @@
-web: sh -c 'cd Reservation/Client/ && npm start'
+web: sh -c 'npm start'
