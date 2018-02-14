@@ -1,4 +1,5 @@
 {
+  "main": "src/app/main.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
