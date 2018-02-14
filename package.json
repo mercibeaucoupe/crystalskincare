@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server"
   },
   "standard": {
     "globals": [
