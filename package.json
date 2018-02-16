@@ -1,7 +1,9 @@
 {
   "main": "src/app/main.js",
   "scripts": {
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress"
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server",
+    "postinstall": "NODE_ENV=production webpack - p"
   },
   "standard": {
     "globals": [
@@ -51,6 +53,9 @@
     "jquery": "^3.2.1",
     "jsverify": "^0.8.2",
     "ngmap": "^1.18.4",
-    "requirejs": "^2.3.5"
+    "requirejs": "^2.3.5",
+    "webpack": "^2.4.1",
+    "webpack-dashboard": "^0.3.0",
+    "webpack-dev-server": "^2.4.5"
   }
 }
