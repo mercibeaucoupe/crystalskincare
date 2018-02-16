@@ -51,8 +51,8 @@ const entry = {
 
 // where webpack puts its compilation results
 const output = {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js'
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].[hash].js',
 }
 
 // rules for how webpack finds imported files

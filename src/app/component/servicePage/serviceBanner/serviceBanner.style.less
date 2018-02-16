@@ -1,17 +1,27 @@
 .service_banner_container {
   width: 98.9vw;
-  height: 30vw;
+  height: 50vw;
   background-image: url("/src/app/component/servicePage/serviceBanner/img/layingLady.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 49.45% 60%;
   opacity: .7;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 2.5vw;
+  .service_banner_top {
+    width: 98.9vw;
+    height: 30vw;
+    background-color: rgba(201,215,243,.6);
+    display: flex;
+    justify-content: center;
+  }
   .quote_container {
-    padding: 1.2vw 0 1vw 0;
-    margin-left: 1vw;
+    height: 18vw;
+    margin-top: 6.5vw;
     display: flex;
     flex-direction: column;
     border-bottom: solid .35vw;
@@ -19,32 +29,35 @@
     .quote {
       font-family: georgia, serif;
       font-style: italic;
-      font-size: 2.7vw;
+      font-size: 4.5vw;
       color: #6c8ac6;
       font-weight: 700;
-      line-height: 3vw;
+      line-height: 5vw;
     }
     .quote::before {
       content: "\201C";
-      font-size: 5vw;
+      font-size: 8.5vw;
       color: #ee6c79;
     }
     .quote::after {
       content: "\201D";
-      font-size: 5vw;
+      font-size: 8.5vw;
       color: #ee6c79;
     }
     .author {
       align-self: flex-end;
       font-weight: bold;
-      font-size: 1.3vw;
+      font-size: 2vw;
+      margin-top: .25vw;
       padding: .2vw;
+      background-color: rgba(245,245,245,.3);
+      box-shadow: 0px 0px 1px rgba(0,0,0,.5);
       color: #ee6c79;
-      background-color: rgba(201,215,243,.8);
     }
   }
   .welcome {
-    margin-right: 1vw;
+    background-color: rgba(255,255,255,.6);
+    width: 100vw;
     .caption {
       background-color: rgba(0,0,0,0.3);
       color: white;
