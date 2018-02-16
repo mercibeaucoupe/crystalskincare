@@ -3,7 +3,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dev": "webpack-dev-server",
-    "postinstall": "NODE_ENV=production webpack - p"
+    "postinstall": "NODE_ENV=production webpack -p"
   },
   "standard": {
     "globals": [
