@@ -1,9 +1,7 @@
 {
   "main": "src/app/main.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "dev": "webpack-dev-server",
-    "postinstall": "NODE_ENV=production webpack -p"
+    "start": "webpack-dev-server"
   },
   "standard": {
     "globals": [
