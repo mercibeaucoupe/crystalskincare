@@ -2,6 +2,20 @@
 
 #header_nav {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  max-height: 100vh;
+  min-width: 200px;
+  width: 22vw;
+  max-width: 250px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
   z-index: 10;
   -webkit-transition: height 0.2s linear;
   -moz-transition: height 0.2s linear;
@@ -10,31 +24,66 @@
 }
 
 #selection {
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    div {
-      h1 {
-        text-decoration: underline;
+  color: white;
+  width: 22vw;
+  max-width: 250px;
+  min-width: 200px;
+  text-align: center;
+
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      a {
+        color: white;
+      }
+      #navSelectService {
+        padding: 12px;
+        transition: .5s;
+      }
+      #navSelectService:hover {
+        background-color: #7980B6;
+        transition: .5s;
+      }
+      #navSelectReservations {
+        padding: 12px;
+        transition: .5s;
+      }
+      #navSelectReservations:hover {
+        background-color: #E180A3;
+        transition: .5s;
+      }
+      #navSelectLocation {
+        padding: 12px;
+        transition: .5s;
+      }
+      #navSelectLocation:hover {
+        background-color: #2D97C4;
+        transition: .5s;
       }
     }
   }
-}
+   
 
-.largeNav {
-  height: 18vw;
-}
-
-.smallNav {
-  height: 5vw;
+  a {
+    text-decoration: none;
+  }
+  a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+   a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
 }
 
 #navMenuContainer {
-  width: 100vw;
   display: flex;
   justify-content: space-between;
-  background-color: #333;
+
   -webkit-transition: height 0.6s ease-in;
   -moz-transition: height 0.6s linear;
   -o-transition: height 0.6s linear;
@@ -45,413 +94,75 @@
 
 #appointment_searchbar {
   padding: 0 4vw 0 0;
-  width: 30vw;
+  width: 22vw;
+  max-width: 250px;
+  min-width: 100px;
   .search_header {
     color: #fff;
   }
   input {
-    width: 20vw;
+    width: 15vw;
+    max-width: 180px;
     margin-right: 0;
-  }
-}
-.largeLayout {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.smallLayout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 10vw;
-  #appointment_searchbar {
-    display: none;
   }
 }
 
 #brand_logo {
+  a {
+    display: flex;
+    width: 22vw;
+    max-width: 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+   a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+  a:hover {
+    text-decoration: none;
+    opacity: .6;
+
+  }
+  
   img {
+    width: 60px;
     -webkit-transition:0.7s width;
     -moz-transition:0.7s width;
     -o-transition:0.7s width;
     transition:0.7s width;
+    padding: 0;
+    margin: 0;
   }
-}
-
-.largeLogo {
-  margin: 1.5vw 0 1.5vw 1.5vw;
-  width: 15vw;
-  transition: .7s opacity;
-}
-.largeLogo:hover {
-  opacity: .7;
-  transition: .7s opacity;
-}
-
-.smallLogo {
-  margin: .5vw 0 .5vw .5vw;
-  width: 10vw;
-}
-
-.largeSelect {
-  display: flex;
-  justify-content: space-around;
-  width: 100vw;
-}
-
-.smallSelect {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 10vw;
-}
-
-.largeNavService {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  width: 25vw;
-  height: 8vw;
-  background-color: #898CFF;
-  text-align: center;
-  padding: 1.5vw;
-  color: white;
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in height;
-  -moz-transition: 0.3s linear height;
-  -o-transition: 0.3s linear height;
-  transition: 0.3s linear height;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
   h1 {
-    color: #fff;
-    font-size: 1.7vw;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.8s linear;
-    font-size: 1.2vw;
-    margin: 0;
-    color: #fff;
-  }
-  img {
-    display: none;
-  }
-}
-
-.largeNavService:hover {
-  height: 14vw;
-  flex-direction: column;
-  justify-content: flex-end;
-  p {
-    visibility: visible;
-    opacity: 1;
-    margin-top: .4vw;
-  }
-  img {
-    align-self: center;
-    display: block;
-    position: relative;
-    z-index: 2;
-    width: 4.5vw;
-    margin-bottom: .3vw;
-  }
-}
-
-.largeNavReservations {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  width: 25vw;
-  height: 8vw;
-  background-color: #FF89B5;
-  text-align: center;
-  padding: 1.5vw;
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in height;
-  -moz-transition: 0.3s linear height;
-  -o-transition: 0.3s linear height;
-  transition: 0.3s linear height;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  h1 {
-    color: #fff;
-    font-size: 1.7vw;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.8s linear;
-    font-size: 1.2vw;
-    margin: 0;
-    color: #fff;
-  }
-  img {
-    display: none;
-
-  }
-}
-
-.largeNavReservations:hover, .largeNavReservations:active {
-  height: 15vw;
-  flex-direction: column;
-  justify-content: flex-end;
-  p {
-    visibility: visible;
-    opacity: 1;
-    padding-top: .2vw;
-  }
-  img {
-    align-self: center;
-    display: block;
-    margin: 1vw;
-    width: 4.5vw;
-  }
-}
-
-.largeNavLocation {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  width: 25vw;
-  height: 8vw;
-  background-color: #FFDC89;
-  text-align: center;
-  padding: 1.5vw;
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in height;
-  -moz-transition: 0.3s ease-in height;
-  -o-transition: 0.3s ease-in height;
-  transition: 0.3s ease-in height;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  h1 {
-    color: #fff;
-    font-size: 1.7vw;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.8s linear;
-    font-size: 1.2vw;
-    margin: 0;
-    color: #fff;
-  }
-  img {
-    display: none;
-  }
-}
-
-.largeNavLocation:hover, .largeNavLocation:active {
-  height: 13.5vw;
-  flex-direction: column;
-  justify-content: flex-end;
-  -webkit-transition: 0.3s ease-in height;
-  -moz-transition: 0.3s ease-in height;
-  -o-transition: 0.3s ease-in height;
-  transition: 0.3s ease-in height;
-  p {
-    visibility: visible;
-    opacity: 1;
-    margin-top: .2vw;
-  }
-  img {
-    display: block;
-    align-self: center;
-    margin: 1vw;
-    width: 5.5vw;
-  }
-
-}
-
-.largeNavAbout {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  width: 25vw;
-  height: 8vw;
-  background-color: #90D4F7;
-  text-align: center;
-  padding: 1.5vw;
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in height;
-  -moz-transition: 0.3s linear height;
-  -o-transition: 0.3s linear height;
-  transition: 0.3s linear height;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  h1 {
-    color: #fff;
-    font-size: 1.7vw;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.8s linear;
-    font-size: 1.2vw;
-    margin: 0;
-    color: #fff;
-  }
-  img {
-    display: none;
-  }
-}
-
-.largeNavAbout:hover {
-  height: 13vw;
-  flex-direction: column;
-  justify-content: flex-end;
-  -webkit-transition: 0.3s ease-in all;
-  -moz-transition: 0.3s linear all;
-  -o-transition: 0.3s linear all;
-  transition: 0.3s linear all;
-  p {
-    visibility: visible;
-    opacity: 1;
-    margin-top: .2vw;
-  }
-}
-
-.smallNavService {
-  margin: 1.5vw 0 .7vw 1vw;
-  padding: 1vw;
-  width: 10vw;
-  text-align: center;
-  background-color: #898CFF;
-  opacity: .6;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-  .smallService {
     padding: 0;
     margin: 0;
-    font-size: 1.2vw;
+    text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-size: 32px;
+    height: 47px;
   }
-  img {
-    width: 3.5vw;
-    margin: .3vw;
+  h1::first-letter {
+    font-size: 58px;
   }
-}
-
-.smallNavService:hover {
-  opacity: 1;
-  width: 11vw;
-  border-right: solid .5vw #fff;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-}
-
-.smallNavReservations {
-  padding: 1vw;
-  margin: 0 0 .7vw 1vw;
-  width: 10vw;
-  text-align: center;
-  background-color: #FF89B5;
-  opacity: .6;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-  .smallReservations {
-    padding: 0;
-    margin: 0;
-    font-size: .95vw;
+  .navName {
+    line-height: 20%;
+    text-align: left;
+  }
+  .caption {
     color: white;
-    font-weight: bold;
-  }
-  img {
-    width: 3.8vw;
-    margin: .3vw;
+    font-size: 12px;
+    margin-top: 15px;
   }
 }
-
-.smallNavReservations:hover, .smallNavReservations:active {
-  opacity: 1;
-  width: 11vw;
-  border-right: solid .5vw #fff;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-}
-
-.smallNavLocation {
-  padding: 1vw;
-  margin: 0 0 .7vw 1vw;
-  width: 10vw;
-  text-align: center;
-  background-color: #FFDC89;
-  opacity: .6;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-  .smallLocation {
-    padding: 0;
-    margin: 0;
-    font-size: 1.2vw;
-    color: white;
-    font-weight: bold;
-  }
-}
-
-.smallNavLocation:hover {
-  opacity: 1;
-  width: 11vw;
-  border-right: solid .5vw #fff;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-}
-
-.smallNavAbout {
-  padding: 1vw;
-  margin: 0 0 .7vw 1vw;
-  width: 10vw;
-  text-align: center;
-  background-color: #90D4F7;
-  opacity: .6;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-  pointer: cursor;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-  .smallAbout {
-    padding: 0;
-    margin: 0;
-    font-size: 1.2vw;
-    color: white;
-    font-weight: bold;
-  }
-}
-
-.smallNavAbout:hover {
-  opacity: 1;
-  width: 11vw;
-  border-right: solid .5vw #fff;
-  -webkit-transition: 0.3s ease-in width;
-  -moz-transition: 0.3s ease-in width;
-  -o-transition: 0.3s ease-in width;
-  transition: 0.3s ease-in width;
-}
-

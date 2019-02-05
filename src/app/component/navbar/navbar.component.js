@@ -9,7 +9,7 @@ const controller = class CryNavBarController {
   	this.state = $state
   	this.location = $location
   	this.logger.log('cry-navbar is a go')
-
+  /*
   	$scope.navClass = 'largeNav'
     $scope.navLayout = 'largeLayout'
     $scope.navLogo = 'largeLogo'
@@ -58,6 +58,7 @@ const controller = class CryNavBarController {
   	  }
   	  $scope.$apply()
   	})
+    */
   }  	
 }
 
