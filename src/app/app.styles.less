@@ -1,5 +1,23 @@
 @import "~bootstrap/less/bootstrap";
 
+html {
+  overflow-x: hidden;
+}
+
 .site_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: [nav] 20vw [main] 80vw;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+}
+
+.nav {
+  grid-column-start: nav;
+  margin: 0;
+}
+
+.main {
+  grid-column-start: main;
+  margin: 0;
 }

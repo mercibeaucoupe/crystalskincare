@@ -1,34 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Rouge+Script');
+@import "~bootstrap/less/bootstrap";
+
+
 .landingBanner {
   background-color:black;
   opacity:.7;
-  height:40vw;
-  diplay: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  color:white;
-  font-size:2.5vw;
-  padding: 0;
+  height: 100vh;
+  width: auto;
   margin: 0;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
   background-image:url('/src/app/component/landingPage/img/banner.png');
+  background-attachment: fixed;
+  text-align: center;
   background-size: cover;
   .firstBorder {
-     width: 400px;
-     height: 200px;
      margin: 0;
+     padding: 6px;
+     text-align: center;
+     border: 1.5px white solid;
+     box-shadow: 0px 2px 2px rgba(0,0,0,.5);
+  }
+  .secondBorder {
+    margin: 0;
+    border: 7px white solid;
+    padding: 6px;
+  }
+  .thirdBorder {
+    border: 1.5px white solid;
+    padding: 30px;
+    .topFont {
+      font-size: 1.5vw;
+    }
+    .styleFont {
+      font-family: 'Rouge Script', cursive;
+      font-size: 7vw;
+    }
   }
 }
 
-
 .landingPage_container {
   width: 78vw;
-  height: 45vw;
-  background-color: #white;
+  height: 100vh;
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  margin:0;
+  margin: 0;
+  padding: 0;
 }
 
 .landingPage_text {
@@ -40,64 +64,64 @@
 .mission_introduction {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   line-height: 4vw;
   text-align: left;
   z-index: 5;
-  width: 40vw;
-  padding: 10px;
+  width: vw;
   .natural {
     font-size: 6vw;
     color: #ffbdbd;
     font-weight: 600;
+    width: 200px;
   }
   .and {
     font-size: 7vw;
     font-weight: 700;
     color: #666;
+    width: 200px;
   }
   .beautiful {
     font-size: 6vw;
     color: #f1cbff;
     font-weight: 600;
+    width: 200px;
   }
   .skin {
     font-size: 4vw;
     color: #666;
+    width: 300px;
     font-weight: bolder;
   }
   .smallText {
     color: #666;
-    font-size: 2vw;
+    font-size: 20px;
+    width: 300px;
   }
 }
 
 .mission_statement {
-  padding: 2vw;
-  width: 40vw;
-  height: 19vw;
-  line-height: 1.4vw;
+  width: 33vw;
+  height: 80vh;
+  line-height: 25px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0,0,0,.3);
   z-index: 3;
-  border-top: solid;
-  border-color: #a9d6b5;
-  border-width: 1.7vw;
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
   .title {
-    font-size: 1.8vw;
+    font-size: 20px;
     font-weight: bold;
-    color: #ffffff;
+    color: #666;
+    padding-top: 10px;
     .emphasis {
-      font-size: 2.2vw;
-      color: #ffdfba;
+      font-size: 32px;
+      color: #666;
       font-weight: 600;
       opacity: 1;
     }
   }
   .statement {
-    font-size: 1.2vw;
-    color: #ffffff;
+    font-size: 18px;
+    color: #666;
     opacity: 1;
     border-bottom: solid .1vw #fff;
     padding-bottom: 1vw;
@@ -106,43 +130,48 @@
     }
   }
   .skinTypes {
-    font-size: 1vw;
+    font-size: 18px;
     padding-top: 1vw;
-    color: #ffffff;
+    color: #666;
     li {
        list-style-type: none;
+       display: flex;
+
     }
   }
   .intro {
     padding-top: 1.2vw;
-    font-size: 1.2vw;
-    color: #ffffff;
+    font-size: 18px;
+    color: #666;
   }
 }
 .image {
   img {
-    width: 45vw;
+    width: 44vw;
   }
 }
 
 .landingPage_container_2 {
-  border-top: solid .7vw #666;
-  background-color: #666;
+  width: 78vw;
 }
-.benefit_container {
+.benefit_container_one {
   text-align: center;
-  width: 98.9vw;
-  height: 42.5vw;
-  display: flex;
-  justify-content: center;
+  width: 78vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: [first] 39vw [second] 39vw;
+  grid-template-rows: [firstrow] 50vh;
   .freckles {
+    grid-column-start: first;
+    grid-row-start: firstrow;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-image: url("/img/Freckles.png");
-    width: 24.7vw;
+    background-image: url("/src/app/component/landingPage/img/Freckles.png");
+    width: 39vw;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     font-size: 4.5vw;
@@ -153,55 +182,6 @@
       position: relative;
       top: 13vw;
     }
-  }
-  .hyperPigment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 24.7vw;
-    text-align: center;
-    background-image: url("/img/hyper.png");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-weight: 600;
-    font-size: 3.2vw;
-    line-height: 3vw;
-    padding: .4vw;
-    transition: .9s;
-  }
-  .lifting {
-    width: 24.7vw;
-    line-height: 4.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-image: url("/img/Lifting.png");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-weight: 600;
-    font-size: 5vw;
-    transition: .4s;
-  }
-  .wrinkle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-image: url("/img/Wrinkles.png");
-    background-size: cover;
-    background-position: center;
-    width: 24.7vw;
-    color: #fff;
-    font-size: 4.5vw;
-    font-weight: 600;
-    transition: .9s;
   }
   .freckles:hover {
     transition: .9s;
@@ -221,6 +201,92 @@
       content: 'Reduce the appearence of Freckles';
     }
   }
+  .wrinkle {
+    grid-column-start: second;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 39vw;
+    height: 50vh;
+    background-image: url("/src/app/component/landingPage/img/Wrinkles.png");
+    //background-image: url("/img/Wrinkles.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 600;
+    transition: .9s;
+  }
+  .wrinkle:hover {
+    transition: .9s;
+    font-size: 3vw;
+    opacity: .5;
+    color: black;
+    background-position: 40%;
+    line-height: 3vw;
+    .wrinkleDetail:after {
+      transition: .2s;
+      font-size: 1.2vw;
+      content: 'Deep/Fine Lines smooth over';
+      color: black;
+    }
+  }
+
+}
+.benefit_container_two {
+  text-align: center;
+  width: 78vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: [first] 39vw [second] 39vw;
+  grid-template-rows: [firstrow] 50vh;
+  .lifting {
+    grid-column-start: first;
+    grid-row-start: firstrow;
+    width: 39vw;
+    height: 50vh;
+    line-height: 4.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    //background-image: url("/img/Lifting.png");
+    background-image: url("/src/app/component/landingPage/img/Lifting.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 5vw;
+    transition: .4s;
+  }
+
+  .hyperPigment {
+    grid-column-start: second;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 39vw;
+    height: 50vh;
+    text-align: center;
+    background-image: url("/src/app/component/landingPage/img/hyper.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3.2vw;
+    line-height: 3vw;
+    padding: .4vw;
+    transition: .9s;
+  }
+
+
   .hyperPigment:hover {
     transition: .9s;
     font-size: 2.5vw;
@@ -249,19 +315,96 @@
       color: black;
     }
   }
-  .wrinkle:hover {
-    transition: .9s;
-    font-size: 3vw;
-    opacity: .5;
-    color: black;
-    background-position: 40%;
-    line-height: 3vw;
-    .wrinkleDetail:after {
-      transition: .2s;
-      font-size: 1.2vw;
-      content: 'Deep/Fine Lines smooth over';
-      color: black;
+
+}
+
+.vector_container_one {
+  display: grid;
+  width: 78vw;
+  max-width: 78%;
+  height: 50vh;
+  grid-template-columns: [first] 26vw [second] 26vw [third] 26vw;
+  grid-template-rows: [firstrow] 50vh;
+  .acne {
+    grid-column-start: first;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 14vw;
+    }
+    .title {
+      color: #fff;
+    }
+    p {
+      text-align: center;
+      color: white;
+
     }
   }
-
+  .chemical {
+    grid-column-start: second;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 15vw;
+    }
+  }
+  .laser {
+    grid-column-start: third;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 15vw;
+    }
+  }
+}
+.vector_container_two {
+  display: grid;
+  width: 78vw;
+  max-width: 78%;
+  height: 50vh;
+  grid-template-columns: [first] 26vw [second] 26vw [third] 26vw;
+  grid-template-rows: [firstrow] 50vh;
+  .lift {
+    grid-column-start: first;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 15vw;
+    }
+  }
+  .lighting {
+    grid-column-start: second;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 15vw;
+    }
+  }
+  .wrinkle {
+    grid-column-start: third;
+    grid-row-start: firstrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 15vw;
+    }
+  }
 }

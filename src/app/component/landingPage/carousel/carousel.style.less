@@ -1,0 +1,183 @@
+.slideshow_container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 156vw;
+  height: 50vh;
+  .wrinkle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 39vw;
+    height: 50vh;
+    background-image: url('/src/app/component/landingPage/img/Wrinkles.png');
+    //background-image: url('/img/Wrinkles.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 600;
+    z-index: 2;
+    transition: .9s;
+  }
+  .wrinkle:hover {
+    transition: .9s;
+    font-size: 3vw;
+    opacity: .5;
+    color: black;
+    background-position: 40%;
+    line-height: 3vw;
+    z-index: 0;
+    .wrinkleDetail:after {
+      transition: .2s;
+      font-size: 1.2vw;
+      content: 'Deep/Fine lines Smooth Over';
+      color: black;
+    }
+  }
+  .freckles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url('/src/app/component/landingPage/img/Freckles.png');
+    //background-image: url('/img/Freckles.png');
+    width: 39vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    font-size: 4.5vw;
+    color: #fff;
+    font-weight: 600;
+    transition: .9s;
+    z-index: 2;
+    .frecklesDetail {
+      position: relative;
+      top: 13vw;
+    }
+  }
+  .freckles:hover {
+    transition: .9s;
+    font-size: 3.5vw;
+    opacity: .5s;
+    color: black;
+    background-position: 70%;
+    line-height: 3vw;
+    opacity: .5;
+    z-index: 0;
+    .frecklesDetail:after {
+      position: relative;
+      transition: .9s all;
+      transition-delay: 1.3s;
+      font-size: 1.2vw;
+      line-height: .2vw;
+      bottom: 13vw;
+      color: black;
+      content: 'Reduce the appearence of Freckles';
+    }
+  }
+  .lifting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 39vw;
+    height: 50vh;
+    line-height: 4.5vw;
+    background-image: url('/src/app/component/landingPage/img/Lifting.png');
+    //backgrond-image: url('/img/Lifting.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 5vw;
+    transition: .9s;
+    z-index: 2;
+
+  }
+  .lifting:hover {
+    transition: .9s;
+    font-size: 3.8vw;
+    opacity: .5;
+    color: black;
+    z-index: 0;
+    line-height: 3vw;
+    background-position: right;
+    .liftingDetail:after {
+      transition: .9s;
+      font-size: 1.2vw;
+      content: 'Tighens/firms without surgerical methods';
+      color: black;
+    }
+  }
+  .hyperPig {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 39vw;
+    height: 50vh;
+    text-align: center;
+    background-image: url('/src/app/component/landingPage/img/hyper.png');
+    //background-image: url('/img/hyper.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3.2vw;
+    line-height: 3vw;
+    padding: .4vw;
+    transition: .9s;
+    z-index: 2;
+  }
+  .hyperPig:hover {
+    transition: .9s;
+    font-size: 2.5vw;
+    opacity: .5;
+    color: black;
+    line-height: 2.2vw;
+    z-index: 0;
+
+    background-position: right;
+    .hyperPigDetail:after {
+      transition: .2s;
+      font-size: 1.2vw;
+      color: black;
+      content: 'Rids your skin of unwanted discoloration';
+    }
+  }
+}
+.controls {
+  position: absolute;
+  width: 78vw;
+  max-width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  opacity: .6;
+  font-size: 5vw;
+  pointer-events: none;
+  .glyphicon {
+    pointer-events: auto;
+    opacity: 0;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    transition: .9s;
+  }
+  .glyphicon:hover {
+    opacity: .5;
+    transition: .9s;
+  }
+}

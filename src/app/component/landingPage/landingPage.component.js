@@ -5,8 +5,9 @@ const controller = class LandingPageController {
   construtor($log) {
   	'ngInject'
   	this.logger = $log
-  	this.logger.log("LandingPage is a go")
+  	this.scope = $scope
   }
+
 }
 
 export const cryLandingPage = {

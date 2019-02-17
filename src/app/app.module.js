@@ -25,7 +25,7 @@ import { cryMagicpeel } from 'app/component/servicePage/serviceTechnology/magicp
 import { cryRfzet } from 'app/component/servicePage/serviceTechnology/rfzet/rfzet.component'
 import { cryLocationPage } from 'app/component/locationPage/locationPage.component'
 import { cryFooter } from  'app/component/footer/footer.component'
-
+import { cryCarousel } from 'app/component/landingPage/carousel/carousel.component'
 
 // Config
 import { routing } from 'app/app.routes'
@@ -54,6 +54,7 @@ export default ng
   .component('cryRfzet', cryRfzet)
   .component('cryLocationPage', cryLocationPage)
   .component('cryFooter', cryFooter)
+  .component('cryCarousel', cryCarousel)
   .config(routing)
   .config(config)
   .name
