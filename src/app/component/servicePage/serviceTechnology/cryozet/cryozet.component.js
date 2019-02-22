@@ -4,9 +4,9 @@ import templateUrl from 'app/component/servicePage/serviceTechnology/cryozet/cry
 export const controller = class CryozetController {
   constructor($log, $scope) {
   	'ngInject'
-    
+
     this.scope = $scope
-  	this.showProducts()
+  	this.showProcedure()
   }
 
   showProcedure() {

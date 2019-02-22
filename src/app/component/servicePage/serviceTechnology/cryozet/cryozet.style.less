@@ -3,9 +3,10 @@
   flex-direction: column;
   align-content: flex-end;
   align-items: flex-end;
-  background-image: url('/img/cryozet-background.png');
+  //background-image: url('/img/cryozet-background.png');
+  background-image: url('/src/app/component/servicePage/serviceTechnology/img/cryozet-background.png');
   background-size: cover;
-  width: 98.9vw;
+  width: 80vw;
   height: 25vw;
   .cryozet_textbox {
     padding: .7vw 3vw 0 0;
@@ -45,14 +46,14 @@
       padding-left: 1.75vw;
       -webkit-clip-path: polygon(90% 0, 80% 50%, 90% 100%, 0 100%, 0 0);
       clip-path: polygon(90% 0, 80% 50%, 90% 100%, 0 100%, 0 0);
-      background-color: #ed6d79;
+      background-color: #2e8cb6;
       transition: .8s all;
       cursor: pointer;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
       -moz-user-select: none;
-      -ms-user-select: none; 
+      -ms-user-select: none;
       user-select: none;
     }
     .cryozet_product {
@@ -70,19 +71,19 @@
       padding-right: 1.75vw;
       -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 20% 50%);
       clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 20% 50%);
-      background-color: #ff96e3;
+      background-color: #7bb6ce;
       transition: .8s all;
       cursor: pointer;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
       -moz-user-select: none;
-      -ms-user-select: none; 
+      -ms-user-select: none;
       user-select: none;
     }
   }
   .cryozet_product:hover {
-    border-bottom: solid .4vw #ed6d79;
+    border-bottom: solid .4vw #7bb6ce;
     padding-right: 2.3vw;
     height: 4.5vw;
     transition: .8s;
@@ -90,7 +91,7 @@
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
   }
   .cryozet_procedure:hover {
-    border-bottom: solid .4vw #ff96e3;
+    border-bottom: solid .4vw #2e8cb6;
     padding-left: 2.3vw;
     height: 4.5vw;
     z-index: 4;
@@ -107,73 +108,71 @@
 }
 
 .cryozet_caption_container {
-  width: 98.9vw;
+  width: 80vw;
   background-color: #439bbf;
 }
   .procedure_container {
-    width: 98.9vw;
+    width: 80vw;
     align-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    .banner_container {
+      width: 40vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
     .banner {
       font-size: 2.5vw;
-      width: 98.9vw;
-      padding: 2vw 20vw 2vw 20vw;
-      color: #666;
-      background-color: #fff;
+      width: 40vw;
+      padding: 4vw;
+      color: #fff;
       text-align: center;
       .emp {
-        text-decoration: underline;
         font-weight: bold;
         font-size: 3vw;
-        color: #ee6c79;
+        color: #fff;
       }
     }
     .title {
-      font-size: 3vw;
+      font-size: 3.5vw;
       color: #fff;
       font-weight: 600;
-      background-color: #ee6c79;
-      width: 98.9vw;
+      padding: 2vw;
+      background-color: #2e8cb6;
+      width: 40vw;
       text-align: center;
     }
     .steps {
       display: flex;
+      width: 40vw;
       flex-direction: column;
       .stepOne {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         align-content: center;
         margin: .5vw;
         text-align: center;
-        width: 80vw;
+        width: 40vw;
         .number {
-          font-size: 8vw;
-          margin: 1vw;
-          font-weight: 800;
-          color: #80c88f;
-        }
-        .name {
-          font-size: 3vw;
-          height: 10vw;
-          background-color: #80c88f;
-          color: #fff;
-          padding: .2vw;
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
-        }
-        .stepCaption {
           font-size: 2vw;
-          background-color: #fff;
-          height: 10vw;
-          padding: .7vw;
-          color: #666;
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+          margin: 1vw;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        .stepCaption {
+          font-size: 1.5vw;
+          padding: 2.2vw;
+          color: #fff;
           .skinTypes {
             font-size: 1vw;
-            color: black;
+            color: #fff;
           }
         }
       }
@@ -182,23 +181,15 @@
         margin: .5vw;
         width: 40vw;
         .number {
-          font-size: 3vw;
-          font-weight: 800;
-          color: #f6a36f;
-        }
-        .name {
-          font-size: 1.6vw;
-          background-color: #f6a36f;
+          font-size: 2vw;
           color: #fff;
-          padding: .2vw;
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+          font-weight: bold;
         }
+
         .stepCaption {
-          font-size: 1.1vw;
-          background-color: #fff;
-          padding: .3vw;
-          color: #666;
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+          font-size: 1.5vw;
+          padding: 2.2vw;
+          color: #fff;
         }
       }
       .stepThree {
@@ -206,23 +197,15 @@
         text-align: center;
         width: 40vw;
         .number {
-          font-size: 3vw;
-          font-weight: 800;
-          color: #f388b5;
-        }
-        .name {
-          font-size: 1.6vw;
-          background-color: #f388b5;
+          font-size: 2vw;
+          font-weight: bold;
           color: #fff;
-          padding: .2vw;
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
         }
+
         .stepCaption {
-          background-color: #fff;
-          font-size: 1.2vw;
-          padding: .4vw;
-          color: #666;
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+          font-size: 1.5vw;
+          padding: 2.2vw;
+          color: #fff;
         }
       }
     }

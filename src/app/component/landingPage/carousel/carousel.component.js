@@ -10,6 +10,13 @@ const controller = class CarouselController {
     this.isRight;
     this.isLeft;
 
+    this.acneClick = false;
+    this.chemClick = false;
+    this.laserClick = false;
+    this.liftClick = false;
+    this.lightClick = false;
+    this.wrinkleClick = false;
+
     this.translate = 0;
 
     this.interval = $interval
@@ -48,6 +55,29 @@ const controller = class CarouselController {
 
   leftEnd() {
     this.isLeft = false
+  }
+
+  acneFlip() {
+    this.acneClick = !this.acneClick
+  }
+
+  chemFlip() {
+    this.chemClick = !this.chemClick
+  }
+
+  laserFlip() {
+    this.laserClick = !this.laserClick
+  }
+
+  liftFlip() {
+    this.liftClick = !this.liftClick
+  }
+
+  lightFlip() {
+    this.lightClick = !this.lightClick
+  }
+  wrinkleFlip() {
+    this.wrinkleClick = !this.wrinkleClick
   }
 }
 

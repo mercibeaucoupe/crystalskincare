@@ -28,48 +28,98 @@
 </div>
 
 <section class="vector_container_one">
-  <div class="acne">
-    <h2 class="title">
-      Acne Treatment
-    </h2>
-    <img src="/src/app/component/landingPage/img/acneCare.png">
-    <p>
+  <div class="acne" ng-click="carousel.acneFlip()">
+    <div class="img_container" ng-show="!carousel.acneClick">
+      <img src="/src/app/component/landingPage/img/acneCare.png">
+      <h2 class="title">
+        ACNE
+      </h2>
+      <div class="secondTitle">
+         TREATMENT
+      </div>
+    </div>
+    <p ng-show="carousel.acneClick" ng-style="pacneshow">
       Fight back those pesky bumps!
       Main factors for acne include:
       Excess Oil Production, Bacteria,
-      Clogged pores from dead skin cells, and Hormone Inbalance.
+      Clogged pores from dead skin cells,
+      and Hormone Inbalance.
     </p>
   </div>
-  <div class="chemical">
-    <h2 class="title">
-      Chemical Peeling
-    </h2>
-    <img src="/src/app/component/landingPage/img/chemicalCare.png">
+  <div class="chemical" ng-click="carousel.chemFlip()">
+    <div class="img_container" ng-show="!carousel.chemClick">
+      <img src="/src/app/component/landingPage/img/chemicalCare.png">
+      <h2 class="title">
+        CHEMICAL
+      </h2>
+      <div class="secondTitle">
+        PEELING
+      </div>
+    </div>
+    <p ng-show="carousel.chemClick">
+      Safely peel away layers of
+      built up dead skin cells and
+      underneath is a beautiful
+      layer of new and clean skin cells.
+    </P>
   </div>
-  <div class="laser">
-    <h2 class="title">
-      Laser Treatment
-    </h2>
-    <img src="/src/app/component/landingPage/img/laserCare.png">
+  <div class="laser" ng-click="carousel.laserFlip()">
+    <div class="img_container" ng-show="!carousel.laserClick">
+      <img src="/src/app/component/landingPage/img/laserCare.png">
+      <h2 class="title">
+        LASER
+      </h2>
+      <div class="secondTitle">
+        TREATMENT
+      </div>
+    </div>
+    <p ng-show="carousel.laserClick">
+      Stimulate cellular renewal by
+      zapping imperfections and troublesome
+      sunspots, hyper-pigmention areas, and
+      acne scars.
+    </p>
   </div>
-</section>
-<section class="vector_container_two">
-  <div class="lift">
-    <h2 class="title">
-      Skin Lifting
-    </h2>
-    <img src="/src/app/component/landingPage/img/liftCare.png">
+  <div class="lift" ng-click="carousel.liftFlip()">
+    <div class="img_container" ng-show="!carousel.liftClick">
+      <img src="/src/app/component/landingPage/img/liftCare.png">
+
+      <h2 class="title">
+        SKIN
+      </h2>
+      <div class="secondTitle">
+        LIFTING
+      </div>
+    </div>
+    <p ng-show="carousel.liftClick">
+
+    </p>
   </div>
-  <div class="lighting">
-    <h2 class="title">
-      Skin Lightening
-    </h2>
-    <img src="/src/app/component/landingPage/img/lighteningCare.png">
+  <div class="lighting" ng-click="carousel.lightFlip()">
+    <div class="img_container" ng-show="!carousel.lightClick">
+      <img src="/src/app/component/landingPage/img/lighteningCare.png">
+      <h2 class="title">
+        SKIN
+      </h2>
+      <div class="secondTitle">
+        LIGHTENING
+      </div>
+    </div>
+    <p ng-show="carousel.lightClick">
+    </p>
   </div>
-  <div class="wrinkle">
-    <h2 class="title">
-      Wrinkle Care
-    </h2>
-    <img src="/src/app/component/landingPage/img/wrinkleCare.png">
+  <div class="wrinkle" ng-click="carousel.wrinkleFlip()">
+    <div class="img_container" ng-show="!carousel.wrinkleClick">
+
+      <img src="/src/app/component/landingPage/img/wrinkleCare.png">
+      <h2 class="title">
+        WRINKLE
+      </h2>
+      <div class="secondTitle">
+        CARE
+      </div>
+    </div>
+    <p ng-show="carousel.wrinkleClick">
+    </p>
   </div>
 </section>

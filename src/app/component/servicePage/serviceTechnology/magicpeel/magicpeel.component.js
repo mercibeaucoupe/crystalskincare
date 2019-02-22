@@ -15,11 +15,11 @@ export const controller = class MagicpeelController {
     this.peel4Active = false;
   }
 
-  peel() {      
+  peel() {
     let blue = 70
     let blueShadow = 88
     let white = 88
-    let left = 78.5
+    let left = 61.8
     let top = 6.1
     let height = 9
     let width = 20
@@ -27,7 +27,7 @@ export const controller = class MagicpeelController {
     if (!this.peelActive) {
       let gradient = this.interval(() => {
         blue = blue - 2
-        left = left - 1.2
+        left = left - 1
         blueShadow--
         white--
         top = top + .03
@@ -68,20 +68,20 @@ export const controller = class MagicpeelController {
     let blue = 70
     let blueShadow = 88
     let white = 88
-    let left = 78.5
+    let left = 61.8
     let top = 6.1
     let height = 9
     let width = 20
     if (!this.peel2Active) {
       let gradient = this.interval(() => {
         blue = blue - 2
-        left = left - 1.2
+        left = left - 1
         blueShadow--
         white--
         top = top + .03
         height = height + .15
         width = width + .15
-      
+
         this.scope.peelRegress2 = {
           'background' : 'linear-gradient(50deg, #76bde5' + ' ' + blue +'%, #6aa6c8' + ' ' + blueShadow + '%, whitesmoke' + ' ' + white + '%, whitesmoke 100%)'
         }
@@ -117,20 +117,20 @@ export const controller = class MagicpeelController {
     let blue = 70
     let blueShadow = 88
     let white = 88
-    let left = 78.5
+    let left = 61.8
     let top = 6.1
     let height = 9
     let width = 20
     if (!this.peel3Active) {
       let gradient = this.interval(() => {
         blue = blue - 2
-        left = left - 1.2
+        left = left - 1
         blueShadow--
         white--
         top = top + .03
         height = height + .15
         width = width + .15
-      
+
         this.scope.peelRegress3 = {
           'background' : 'linear-gradient(50deg, #b1cbfe' + ' ' + blue +'%, #869bc5' + ' ' + blueShadow + '%, whitesmoke' + ' ' + white + '%, whitesmoke 100%)'
         }
@@ -166,14 +166,14 @@ export const controller = class MagicpeelController {
     let blue = 70
     let blueShadow = 88
     let white = 88
-    let left = 78.5
+    let left = 61.8
     let top = 6.1
     let height = 9
     let width = 20
     if (!this.peel4Active) {
       let gradient = this.interval(() => {
         blue = blue - 2
-        left = left - 1.2
+        left = left - 1
         blueShadow--
         white--
         top = top + .03
