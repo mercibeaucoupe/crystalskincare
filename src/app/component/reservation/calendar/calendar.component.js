@@ -7,35 +7,45 @@ const controller = class CalendarController {
     this.logger = $log
     this.scope = $scope
     this.dateService = dateService
-    this.month = new Date().getMonth()
-    this.year = new Date().getFullYear()
-    this.monthObject = this.getMonth(this.month, this.year)
-    this.startDate = this.monthObject.startsOn()
-    this.numberOfDays = []
+    this.month = dateService.date.getMonth()
+    this.year = dateService.date.getFullYear()
+    this.day = dateService.date.getDay()
+    this.date = dateService.date.getDate()
+
+    this.daysOfWeek = this.getDaysOfWeek()
+    this.logger.log(this.daysOfWeek)
+
   }
 
-  getTime() {
-  	let timeArr = this.dateService.getTime().split(',')
-  	return timeArr[0]
+  getStringMonth() {
+    return this.dateService.getMonth(this.month, this.year).month
   }
 
-  getDate() {
-  	let dateArray = []
-  	for (let i = 0; i < this.monthObject.numberOfDays; i++) {
-      dateArray.push({
-        month: {
-          month_string: this.monthObject.month,
-          month_numeral: this.monthObject.month_numeral
-        },
-        date: i + 1,
-        year: this.year
+  getDaysOfWeek() {
+    let currentDate = this.date;
+    let weekArray = []
+    for (let i = 0; i < 7; i++) {
+      if (this.date >= this.dateService.getMonth(this.month, this.year).numberOfDays) {
+        this.month++
+        this.date = 1
+        this.day = this.dateService.getMonth(this.month, this.year).startsOn()
+      } else {
+        this.date++
+        if (this.day >= 6) {
+          this.day = 0
+        } else {
+          this.day++
+        }
+      }
+      weekArray.push({
+        date : this.date,
+        month : this.month + 1,
+        day : this.dateService.getStringDay(this.day)
       })
-  	}
-  	this.numberOfDays = dateArray;
-  }
+    }
+    console.log(weekArray)
+    return weekArray
 
-  getMonth(month, year) {
-    return this.dateService.getMonth(month, year)
   }
 
   prevMonth() {
@@ -44,9 +54,6 @@ const controller = class CalendarController {
       this.month = 11;
       this.year = this.year - 1
     }
-    this.monthObject = this.getMonth(this.month, this.year)
-    this.startDate = this.monthObject.startsOn()
-    this.getDate()
   }
 
   nextMonth() {
@@ -55,48 +62,6 @@ const controller = class CalendarController {
   	  this.month = 0
   	  this.year = this.year + 1
   	}
-  	this.monthObject = this.getMonth(this.month, this.year)
-  	this.startDate = this.monthObject.startsOn()
-  	this.getDate()
-  }
-
-  setToday() {
-  	this.month = new Date().getMonth()
-  	this.year = new Date().getFullYear()
-  	this.monthObject = this.getMonth(this.month, this.year)
-  	this.startDate = this.monthObject.startsOn()
-  	this.getDate()
-  }
-
-  getNumberOfDays() {
-  	return Array.from(new Array(this.monthObject.numberOfDays), (x,i) => i + 1)
-  }
-
-  findDayOfWeek(index) {
-    if (index === 0) {
-  	  switch (this.startDate) {
-  	    case 0:
-  	      return 'sundaywk1'
-  	      break
-  	    case 1:
-  	      return 'mondaywk1'
-  	      break
-  	    case 2:
-  	      return 'tuesdaywk1'
-  	      break
-  	    case 3:
-  	      return 'wednesdaywk1'
-  	      break
-  	    case 4:
-  	      return 'thursdaywk1'
-  	      break
-  	    case 5: 
-  	      return'fridaywk1'
-  	      break
-  	    case 6:
-  	      return 'saturdaywk1'
-  	  }
-    }
   }
 }
 

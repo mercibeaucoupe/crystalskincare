@@ -1,11 +1,19 @@
 <div class="month_container" ng-init="calendar.findDayOfWeek()">
   <div class="monthSelector">
     <a class="prev" ng-click="calendar.prevMonth()"><div class="glyphicon glyphicon-chevron-left"></div></a>
-    <div class="month" ng-model="month">{{calendar.monthObject.month}} {{calendar.year}}</div>
+    <div class="month" ng-model="month">{{calendar.getStringMonth()}} {{calendar.year}}</div>
     <a class="next" ng-click="calendar.nextMonth()"><div class="glyphicon glyphicon-chevron-right"></div></a>
   </div>
   <div class="todayButton" ng-click="calendar.setToday()">Today {{calendar.getTime()}}</div>
 </div>
+
+<div class="date_container">
+  <div class="days_week" ng-repeat="days in calendar.daysOfWeek">
+    <cry-date days = "days"></cry-date>
+  </div>
+</div>
+
+<!--
 <div class="calendar_container" ng-init="calendar.getDate()">
   <div class="sunday day">Sunday</div>
   <div class="monday day">Monday</div>
@@ -18,3 +26,4 @@
     <cry-date days = "days"></cry-date>
   </div>
 </div>
+-->

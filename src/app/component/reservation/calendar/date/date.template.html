@@ -1,5 +1,7 @@
 <div class="date_container" ng-init="date.getAvailableReservation()">
-  <div class="date">{{date.days.date}}</div>
+
+  <header class="dayOfWeek">{{date.days.day}}</header>
+  <div class="date">{{date.days.month}} / {{date.days.date}}</div>
   <div class="available">Available Times</div>
   <div class="scrollbar scrollbar-primary">
     <div class="force-overflow">
