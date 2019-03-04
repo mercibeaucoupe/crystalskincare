@@ -12,7 +12,7 @@
       </a>
     </div>
   </div>
-  
+
   <div id="selection" ng-class="navSelect">
     <ul>
       <li>
@@ -31,15 +31,16 @@
           </div>
         </a>
       </li>
-      <li>
-        <a ui-sref="location">
-          <div id="navSelectLocation" ng-class="navLocation">
-            <h3 ng-class="location">LOCATION</h3>
-            <p ng-show="navbar.isLarge">Having difficulty finding us? Click here for directions and maps</p>
-          </div>
-        </a>
-      </li>
     </ul>
+    <div class="location_container">
+      <div class="glyphicon glyphicon-map-marker" style="font-size:2.3vw;padding:.5vw;color:#fff;width:5vw;margin-bottom:.5vw;"></div>
+      <address class="address">7023 Little River Tnpk Suite 202
+      Annandale, VA 22003</address>
+    </div>
+    <div class="phone_container">
+      <div class="glyphicon glyphicon-earphone" style="font-size:2.3vw;padding:.5vw;margin-bottom:.5vw;"></div>
+      <div class="phone">(571) 451-7500</div>
+    </div>
   </div>
 
   <!--<div id="appointment_searchbar">

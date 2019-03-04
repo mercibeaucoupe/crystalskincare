@@ -1,5 +1,9 @@
 import uiRouter from 'angular-ui-router'
+import ngAnimate from 'angular-animate'
 import ngMap from 'ngmap'
+
+import ngMaterial from 'angular-material'
+import ngMessages from 'angular-messages'
 
 // Services
 import { DateService } from 'app/service/date.service'
@@ -32,7 +36,7 @@ import { routing } from 'app/app.routes'
 import { config } from 'app/app.config'
 
 export default ng
-  .module('CrystalSkinCare', [uiRouter, ngMap])
+  .module('CrystalSkinCare', [uiRouter, ngMap, ngAnimate, ngMaterial, ngMessages])
   .service('dateService', DateService)
   .service('reservationService', ReservationService)
   .component('cryApp', cryApp)

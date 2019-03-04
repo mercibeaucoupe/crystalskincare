@@ -1,28 +1,65 @@
-.reservationPage_container {
-  width: 98.9vw;
-  height: 20vw;
-  .background_container {
-    background-image: url('/img/calendar-banner.jpg');
-    background-size: cover;
-    height: 20vw;
-    opacity: .7;
-  }
-  .banner_text_container {
-    display: flex;
-    justify-content: center;
-    width: 98.9vw;
+cry-calendar {
+  overflow-y: hidden;
+}
 
-    .banner_text {
-      text-align: center;
-  	  font-size: 1.5vw;
-  	  padding: 4vw;
-  	  width: 50vw;
-  	  position: relative;
-      top: -20vw;
-      color: #fff;
-      background-color: rgba(0,0,0,.4);
-      border-top: solid .7vw #333;
-      box-shadow: 2px 2px 1px rgba(0,0,0,.5);
-    }
+
+.reservation_leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  justify-content: flex-start;
+}
+.reservation_banner {
+  width: 40vw;
+  font-size: 1.6vw;
+  color: white;
+  padding: 2vw;
+  padding-top: 5vw;
+}
+
+.calendar_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 2vw;
+}
+.formatDay_container {
+  width: 12vw;
+  height: 27.1vw;
+  //background-color: rgba(119, 197, 140, .9);
+  padding: 1vw;
+  .format_year {
+    font-size: 2vw;
+    color: rgba(255,255,255,.7);
+  }
+  .format_day {
+    font-size: 2.5vw;
+    color: white;
+  }
+  .format_month_date {
+    font-size: 2.5vw;
+    color: white;
+  }
+}
+
+.reservation_container {
+  width: 80vw;
+
+  background-image: url('/src/app/component/reservation/img/background_reserv.jpg');
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: flex-start;
+  align-content: center;
+}
+.date_input {
+  width: 15vw;
+  font-size: 3vw;
+  .form-control {
+    font-size: 1.6vw;
+    text-align: center;
   }
 }

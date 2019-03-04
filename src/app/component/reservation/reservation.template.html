@@ -1,11 +1,24 @@
-<div class="reservationPage_container">
-  <div class="background_container">
+<section class="reservation_container">
+  <div class="reservation_leftSide">
+  <div class="reservation_banner">
+    Make your time, our time. Check available times that
+    are animable for YOU. Confirm the time and date by email,
+    and check your appointment status online.
   </div>
-  <div class="banner_text_container">
-    <div class="banner_text">
-      At Crystal Skin Care, making reservations/appointments is easy. First scroll down and find an animable time slot for you, comfirm the time and date by email, and check your appointment status online.
+  <div class="calendar_wrapper">
+    <cry-calendar day = "reservation.day"></cry-calendar>
+    <div class="formatDay_container">
+      <div class="format_year">{{reservation.getFormatDay().getFullYear()}}</div>
+      <div class="format_day">{{reservation.getDayOfWeek(reservation.getFormatDay().getDay())}},</div>
+      <div class="format_month_date">{{reservation.getMonth(reservation.getFormatDay().getMonth())}} {{reservation.getDate(reservation.getFormatDay().getDate())}}</div>
     </div>
   </div>
-</div>
-
-<cry-calendar></cry-calendar>
+  </div>
+  <div class="reservationTime_container">
+  	  <div class="result_reservation" ng-repeat="times in date.reservationList">
+  	    <a ui-sref="reservationConfirm({year: date.days.year, date: date.days.date, month: date.days.month.month_numeral, time: times.startingTime})">
+  	      <cry-times ng-show="date.passedTime(times, date.days.date, date.days.month, date.days.year)" times = "times"></cry-times>
+  	    </a>
+  	  </div>
+  </div>
+</section>

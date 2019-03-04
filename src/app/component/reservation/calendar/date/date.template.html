@@ -1,17 +1,3 @@
 <div class="date_container" ng-init="date.getAvailableReservation()">
-
-  <header class="dayOfWeek">{{date.days.day}}</header>
-  <div class="date">{{date.days.month}} / {{date.days.date}}</div>
-  <div class="available">Available Times</div>
-  <div class="scrollbar scrollbar-primary">
-    <div class="force-overflow">
-      <div class="reservationTime_container">
-  	    <div class="result_reservation" ng-repeat="times in date.reservationList">
-  	      <a ui-sref="reservationConfirm({year: date.days.year, date: date.days.date, month: date.days.month.month_numeral, time: times.startingTime})">
-  	       	<cry-times ng-show="date.passedTime(times, date.days.date, date.days.month, date.days.year)" times = "times"></cry-times>
-  	      </a>
-  	    </div>
-  	  </div>
-  	</div>
-  </div>
+  <div class="date">{{date.days.date}}</div>
 </div>
