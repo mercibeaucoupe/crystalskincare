@@ -1,9 +1,12 @@
 {
   "main": "src/app/main.js",
+  "name": "crystalskincare.co",
+  "version": "1.0.1",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "node server.js",
     "dev": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --profile"
   },
   "standard": {
     "globals": [

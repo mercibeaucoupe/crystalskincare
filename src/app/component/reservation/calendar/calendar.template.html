@@ -4,7 +4,7 @@
     <div class="month" ng-model="month">{{calendar.monthObject.month}} {{calendar.year}}</div>
     <a class="next" ng-click="calendar.nextMonth()"><div class="glyphicon glyphicon-chevron-right"></div></a>
   </div>
-<div class="calendar_container" ng-init="calendar.getDate()">
+<div class="calendar_container" ng-init="calendar.getDate()" >
   <div class="sunday day">Su</div>
   <div class="monday day">Mo</div>
   <div class="tuesday day">Tu</div>
@@ -12,9 +12,9 @@
   <div class="thursday day">Th</div>
   <div class="friday day">Fr</div>
   <div class="saturday day">Sa</div>
-  <div class="month_days" ng-repeat="days in calendar.numberOfDays" ng-class="{[calendar.findDayOfWeek($index), calendar.selectedDate($index)]}" ng-model="days"
-  ng-click="calendar.getDay(days)">
-    <cry-date days = "days"></cry-date>
+  <div class="month_days" ng-repeat="days in calendar.numberOfDays" ng-class="calendar.selectedDate($index) + ' ' + calendar.findDayOfWeek($index)" ng-model="days"
+  ng-click="calendar.getDay(days)" ng-style="dayOfWeek">
+    <cry-date  days = "days"></cry-date>
   </div>
 </div>
 </div>

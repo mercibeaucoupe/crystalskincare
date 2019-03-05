@@ -2,10 +2,11 @@ import 'app/component/reservation/calendar/calendar.style'
 import templateUrl from 'app/component/reservation/calendar/calendar.template'
 
 const controller = class CalendarController {
-  constructor($log, $scope, dateService) {
+  constructor($log, $scope, $element, dateService) {
     'ngInject'
     this.logger = $log
     this.scope = $scope
+    this.element = $element
     this.dateService = dateService
     this.month = new Date().getMonth()
     this.year = new Date().getFullYear()
@@ -14,20 +15,21 @@ const controller = class CalendarController {
     this.numberOfDays = []
 
     this.today = (new Date()).getDate()
-
   }
 
   selectedDate(index) {
-    let currentDate = (new Date()).getDate()
-
-    if (index + 1 === currentDate) {
-      console.log("WOAHH")
+    let selectedDay
+    if (this.day == null) selectedDay =  this.numberOfDays[this.today - 1].date
+    else selectedDay = this.day.date
+    if (index + 1 === selectedDay) {
+      return 'hover'
+    } else {
+      return ''
     }
   }
 
   getDay(day) {
     this.day = day
-    console.log(this.day.date)
   }
 
   getTime() {
@@ -48,6 +50,8 @@ const controller = class CalendarController {
       })
   	}
   	this.numberOfDays = dateArray;
+    this.day.month.month_string = this.monthObject.month
+    this.day.month.month_numeral = this.monthObject.month_numeral
   }
 
   getMonth(month, year) {
@@ -113,6 +117,7 @@ const controller = class CalendarController {
   	      return 'saturdaywk1'
   	  }
     }
+
 
   }
 }

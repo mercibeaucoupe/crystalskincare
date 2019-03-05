@@ -1,8 +1,9 @@
 .service_banner_container {
   width: 80vw;
   height: 200vh;
-  //background-image: url("/img/layingLady.png");
-  background-image: url("/src/app/component/servicePage/serviceBanner/img/layingLady.png");
+  margin: auto;
+  background-image: url("/img/layingLady.png");
+  //background-image: url("/src/app/component/servicePage/serviceBanner/img/layingLady.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -67,7 +68,7 @@
   }
   .welcome {
     width: 80vw;
-    height: 100vh;
+    height: 75vh;
     align-self: flex-start;
     display: flex;
     flex-direction: row;
@@ -96,5 +97,21 @@
       background-color: rgba(238, 108, 121, .7);
     }
 
+
+  }
+  .icon_container {
+    width: 80vw;
+    max-width: 80%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+      .icon {
+        img {
+          width: 12vw;
+        }
+      }
   }
 }
